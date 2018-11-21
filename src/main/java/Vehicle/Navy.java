@@ -1,6 +1,8 @@
 package Vehicle;
 
 import Behaviours.IDamage;
+import Kaiju.Kaiju;
+import Kaiju.Scunner;
 
 public class Navy extends Vehicle {
 
@@ -10,6 +12,7 @@ public class Navy extends Vehicle {
     }
 
     public void attack(IDamage damageObject) {
+        if(damageObject instanceof Kaiju)
         damageObject.takeDamage(this.getAttackValue());
     }
 
